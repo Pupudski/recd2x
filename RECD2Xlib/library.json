@@ -1,0 +1,8 @@
+{
+  "name": "RECD2Xlib by Pupudski",
+  "keywords": "RECD2Xlib",
+  "description": "A bunch of code for my rocket stuff",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
+
