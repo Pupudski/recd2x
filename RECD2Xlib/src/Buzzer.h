@@ -1,13 +1,8 @@
 #ifndef Buzzer_h
 #define Buzzer_h
 
-#if ARDUINO >= 100
-  #include "Arduino.h"
-#else
-  #include "WProgram.h"
-  #include "pins_arduino.h"
-  #include "WConstants.h"
-#endif
+#include "Arduino.h"
+
 
 class Buzzer {
 	public:
@@ -18,8 +13,12 @@ class Buzzer {
 		void deploy();
 		void idle();
 		void error(int y);
+		void findMe();
+		void playTone(int note);
+		/*
 		void debugRec();
 		void debugDisIdle();
+		*/
 	private:
 		int _pin;
 };

@@ -21,11 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef MS5611_h
 #define MS5611_h
 
-#if ARDUINO >= 100
 #include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
+
 
 #define MS5611_ADDRESS                (0x77)
 

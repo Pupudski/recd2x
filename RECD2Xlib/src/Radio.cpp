@@ -9,18 +9,21 @@ bool Radio::begin() {
 	_rf.startListening();
 	return _output;
 }
-bool Radio::checkArm(){
+int Radio::checkArm(){
 	if(_rf.available()){
 		_codeReceived = 0;
 		while (_rf.available()) {
 			_rf.read(&_codeReceived, sizeof(int));
 	    }
-		if(_codeReceived = _armCode){
-			return true;
+		if(_codeReceived == _armCode){
+			return 1;
 		}
-		else if(_codeReceived = _disarmCode){
-			return false;
+		else if(_codeReceived == _disarmCode){
+			return 2;
+		}
+		else if(_codeReceived == _turnOffCode){
+			return 3;
 		}
 	}
-	return false;
+	return 0;
 }

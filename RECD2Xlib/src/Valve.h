@@ -1,14 +1,7 @@
 #ifndef Valve_h
 #define Valve_h
- 
-#if ARDUINO >= 100
-  #include "Arduino.h"
-#else
-  #include "WProgram.h"
-  #include "pins_arduino.h"
-  #include "WConstants.h"
-#endif
 
+#include "Arduino.h"
 #include "Servo.h"
 
 class Valve {
